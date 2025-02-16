@@ -139,7 +139,7 @@ const Navbar = () => {
             >
               <Button title="Compre Agora" />
             </a>
-            
+
           </nav>
 
           <div className="md:hidden flex items-center">
@@ -196,14 +196,14 @@ const Navbar = () => {
             Cardápio
           </Link>
           <Link
-            to="review"
+            to="avaliaçoes"
             spy={true}
             smooth={true}
             duration={500}
             className=" hover:text-brightColor transition-all cursor-pointer"
             onClick={closeMenu}
           >
-            Reviews
+            Avaliações
           </Link>
 
           {/* Button */}
