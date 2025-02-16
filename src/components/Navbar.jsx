@@ -2,34 +2,34 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { BiRestaurant } from "react-icons/bi";
 import Button from "../layouts/Button";
-import {BiChevronDown} from "react-icons/bi"
-import {AiOutlineClose} from "react-icons/ai"
-import {AiOutlineMenuUnfold} from "react-icons/ai"
+import { AiOutlineMenuUnfold } from "react-icons/ai";
+import { BiChevronDown } from "react-icons/bi";
+import { AiOutlineClose } from "react-icons/ai";
+
 const Navbar = () => {
+  const [menu, setMenu] = useState(false);
 
-const [menu, setmenu] = useState(false);
+  const handleChange = () => {
+    setMenu(!menu);
+  };
 
-const handleChange = () => {
-    setmenu(!menu)
-}
+  const closeMenu = () => {
+    setMenu(false);
+  };
 
-const closeMenu = () => {
-    setMenu(false )
-}
-
-
-    return (
-    <div className="fixed w-full">
+  return (
+    <div className=" fixed w-full">
       <div>
-        <div className="flex flex-row justify-between p-5 md:px-32 px-5 bg-white shadow-[0_3px_10px_rgba(0,0,0,0.2)]">
+        <div className=" flex flex-row justify-between p-5 md:px-32 px-5 bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
           <div className=" flex flex-row items-center cursor-pointer">
             <span>
               <BiRestaurant size={32} />
             </span>
-            <h1 className="text-xl font-semibold">Faster-Food</h1>
+            <h1 className=" text-xl font-semibold">FoodieWeb</h1>
           </div>
+
           <nav className="hidden md:flex flex-row items-center text-lg font-medium gap-8">
-          <Link
+            <Link
               to="home"
               spy={true}
               smooth={true}
@@ -48,7 +48,7 @@ const closeMenu = () => {
                   duration={500}
                   className="hover:text-brightColor transition-all cursor-pointer"
                 >
-                  Dishes
+                  Pratos
                 </Link>
 
                 <BiChevronDown className="cursor-pointer" size={25} />
@@ -57,29 +57,29 @@ const closeMenu = () => {
               <ul className="absolute hidden space-y-2 group-hover:block bg-white border border-gray-300 rounded-lg p-5">
                 <li>
                   <Link
-                    to="pratos"
+                    to="dishes"
                     spy={true}
                     smooth={true}
                     duration={500}
                     className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
                   >
-                    Apimentada
+                    Apimentado
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="pratos"
+                    to="dishes"
                     spy={true}
                     smooth={true}
                     duration={500}
                     className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
                   >
-                    Saborosa
+                    Saboroso
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="pratos"
+                    to="dishes"
                     spy={true}
                     smooth={true}
                     duration={500}
@@ -90,7 +90,7 @@ const closeMenu = () => {
                 </li>
                 <li>
                   <Link
-                    to="pratos"
+                    to="dishes"
                     spy={true}
                     smooth={true}
                     duration={500}
@@ -103,7 +103,7 @@ const closeMenu = () => {
             </div>
 
             <Link
-              to="sobre"
+              to="about"
               spy={true}
               smooth={true}
               duration={500}
@@ -113,17 +113,17 @@ const closeMenu = () => {
             </Link>
 
             <Link
-              to="cardapio"
+              to="menu"
               spy={true}
               smooth={true}
               duration={500}
               className="hover:text-brightColor transition-all cursor-pointer"
             >
-              Cardápio
+              Cardápio Premium
             </Link>
 
             <Link
-              to="avaliações"
+              to="review"
               spy={true}
               smooth={true}
               duration={500}
@@ -133,20 +133,21 @@ const closeMenu = () => {
             </Link>
 
             {/* Button */}
-            <a
+          <a
               href="https://api.whatsapp.com/send/?phone=18981142927&text=Gostaria%20de%20fazer%20um%20pedido"
               target="_blank"
             >
-              <Button title="Peça o Seu" />
+              <Button title="Compre Agora" />
             </a>
+            
           </nav>
 
-          <div>
-            {menu ? ( <AiOutlineClose size={25} onClick={handleChange}/>
-            ):(
-                <AiOutlineMenuUnfold size={25} onClick={handleChange}/>
-            )
-            }
+          <div className="md:hidden flex items-center">
+            {menu ? (
+              <AiOutlineClose size={25} onClick={handleChange} />
+            ) : (
+              <AiOutlineMenuUnfold size={25} onClick={handleChange} />
+            )}
           </div>
         </div>
         <div
@@ -165,7 +166,7 @@ const closeMenu = () => {
             Home
           </Link>
           <Link
-            to="pratos"
+            to="dishes"
             spy={true}
             smooth={true}
             duration={500}
@@ -175,7 +176,7 @@ const closeMenu = () => {
             Pratos
           </Link>
           <Link
-            to="sobre"
+            to="about"
             spy={true}
             smooth={true}
             duration={500}
@@ -185,7 +186,7 @@ const closeMenu = () => {
             Sobre
           </Link>
           <Link
-            to="cardapio"
+            to="menu"
             spy={true}
             smooth={true}
             duration={500}
@@ -195,26 +196,24 @@ const closeMenu = () => {
             Cardápio
           </Link>
           <Link
-            to="avaliaçoes"
+            to="review"
             spy={true}
             smooth={true}
             duration={500}
             className=" hover:text-brightColor transition-all cursor-pointer"
             onClick={closeMenu}
           >
-            Avaliações
+            Reviews
           </Link>
 
           {/* Button */}
           <a
-              href="https://api.whatsapp.com/send/?phone=18981142927&text=Gostaria%20de%20fazer%20um%20pedido"
-              target="_blank"
-            >
-              <Button title="Peça o Seu" />
-            </a>
-            
+            href="https://api.whatsapp.com/send/?phone=18981142927&text=Gostaria%20de%20fazer%20um%20pedido"
+            target="_blank"
+          >
+            <Button title="Peça Aqui" />
+          </a>
         </div>
-
       </div>
     </div>
   );
