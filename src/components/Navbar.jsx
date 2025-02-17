@@ -25,7 +25,7 @@ const Navbar = () => {
             <span>
               <BiRestaurant size={32} />
             </span>
-            <h1 className=" text-xl font-semibold">FoodieWeb</h1>
+            <h1 className=" text-xl font-semibold">Faster-Food</h1>
           </div>
 
           <nav className="hidden md:flex flex-row items-center text-lg font-medium gap-8">
@@ -137,7 +137,7 @@ const Navbar = () => {
               href="https://api.whatsapp.com/send/?phone=18981142927&text=Gostaria%20de%20fazer%20um%20pedido"
               target="_blank"
             >
-              <Button title="Peça o seu" />
+              <Button title="Pedir" />
             </a>
           </nav>
 
@@ -195,7 +195,7 @@ const Navbar = () => {
             Cardápio
           </Link>
           <Link
-            to="avaliaçoes"
+            to="review"
             spy={true}
             smooth={true}
             duration={500}

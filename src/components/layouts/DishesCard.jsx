@@ -18,7 +18,14 @@ const DishesCard =(props)=>{
             </div>
             <div className="flex flex-row items-center justify-center gap-2">
                 <h3 className="font-semibold text-lg">{props.price}</h3>
-                <Button title="Selecionar"/>
+                
+                {/* Button */}
+          <a
+              href="https://api.whatsapp.com/send/?phone=18981142927&text=Gostaria%20de%20fazer%20um%20pedido"
+              target="_blank"
+            >
+              <Button title="Selecionar" />
+            </a>
             </div>
         </div>
       </div>
