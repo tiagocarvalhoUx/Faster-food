@@ -137,7 +137,7 @@ const Navbar = () => {
               href="https://api.whatsapp.com/send/?phone=18981142927&text=Gostaria%20de%20fazer%20um%20pedido"
               target="_blank"
             >
-              <Button title="Compre Agora" />
+              <Button title="Peça o seu" />
             </a>
           </nav>
 
