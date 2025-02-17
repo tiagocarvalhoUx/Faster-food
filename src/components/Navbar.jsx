@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { BiRestaurant } from "react-icons/bi";
-import Button from "../layouts/Button";
+import Button from "./layouts/Button";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
@@ -133,13 +133,12 @@ const Navbar = () => {
             </Link>
 
             {/* Button */}
-          <a
+            <a
               href="https://api.whatsapp.com/send/?phone=18981142927&text=Gostaria%20de%20fazer%20um%20pedido"
               target="_blank"
             >
               <Button title="Compre Agora" />
             </a>
-
           </nav>
 
           <div className="md:hidden flex items-center">

@@ -5,7 +5,7 @@ import img3 from "../assets/img/img3.jpg";
 import img4 from "../assets/img/img4.jpg";
 import img5 from "../assets/img/img5.jpg";
 import img6 from "../assets/img/img6.jpg";
-import DishesCard from "../layouts/DishesCard";
+import DishesCard from "./layouts/DishesCard";
 
 const Dishes = () => {
   return (
